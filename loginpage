@@ -1,0 +1,138 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title></title>
+    <style>
+        css* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.login-card {
+  background: #fff;
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.login-card p.sub {
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin: 14px 0 24px;
+}
+
+.options a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #5a6fd6;
+}
+
+.signup {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #777;
+}
+
+.signup a {
+  color: #66cbea;
+  text-decoration: none;
+  font-weight: 600;
+}
+    </style>
+</head>
+<body>
+    <h1>LOGIN PAGE</h1>
+   USERNAME: <input type="text" name="username" id="us"></input><br></br>
+    PASSWORD:<input type="password" pass="password" id="pa"></input><br></br>
+    <button onclick="logic()">LOGIN</button>
+    <p id="msg"></p>
+    <script>
+        let username=document.getElementById("us");
+let password=document.getElementById("pa");
+function logic(){
+            let user=username.value;
+            let pass=password.value;
+            if(user==""&& pass==""){
+                document.getElementById("msg").innerHTML="enter your details";
+            }
+            else{
+                document.getElementById("msg").innerHTML="login succesfull";
+            }
+        }
+   </script>
+        
+</body>
+</html>
